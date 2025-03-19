@@ -11,4 +11,10 @@ class ConcoursController extends Controller
         $listeConcours = concours::all();
         return view('index',compact("listeConcours"));
     }
+
+    public function allEpreuves($id){
+        $concours = concours::find($id);
+        $listeEpreuves=$concours->epreuves;
+        return view('epreuves',compact("listeEpreuves"));
+    }
 }

@@ -12,12 +12,14 @@
   </thead>
   <tbody>
     @foreach($listeConcours as $concours)
+    <a href="{{ route('epreuves',['id'=>$concours->id]) }}">
     <tr>
       <th scope="row">{{ $concours->numero }}</th>
       <td>{{ $concours->intitule }}</td>
       <td>{{ $concours->type }}</td>
       <td>{{ $concours->date }}</td>
     </tr>
+    </a>
     @endforeach
   </tbody>
 </table>
