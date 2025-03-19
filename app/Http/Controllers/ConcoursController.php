@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\concours;
+use App\Models\epreuve;
 use Illuminate\Http\Request;
 
 class ConcoursController extends Controller
