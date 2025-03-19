@@ -11,16 +11,16 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($listeConcours as $concours)
-    <a href="{{ route('epreuves',['id'=>$concours->id]) }}">
-    <tr>
+    @forelse($listeConcours as $concours)
+    <tr onclick="window.location='{{ route('showEpreuves', ['id' => $concours->id]) }}'" style="cursor: pointer;">
       <th scope="row">{{ $concours->numero }}</th>
       <td>{{ $concours->intitule }}</td>
       <td>{{ $concours->type }}</td>
       <td>{{ $concours->date }}</td>
     </tr>
-    </a>
-    @endforeach
+    @empty
+    <div>Aucun Concours</div>
+    @endforelse
   </tbody>
 </table>
 @endsection

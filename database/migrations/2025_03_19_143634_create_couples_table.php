@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('ecurie');
             $table->time('temps'); // sous forme de HH:MM:SS
             $table->integer('penalite'); 
+            $table->integer('ordrePassage'); 
             $table->time('temps_total'); // sous forme de HH:MM:SS
             $table->integer('classement'); 
             $table->unsignedBigInteger('epreuve_id'); // Clé étrangère vers la table epreuves

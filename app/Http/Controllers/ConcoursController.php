@@ -18,4 +18,10 @@ class ConcoursController extends Controller
         $listeEpreuves=$concours->epreuves;
         return view('epreuves',compact("listeEpreuves"));
     }
+
+    public function allCouples($id){
+        $epreuve = epreuve::find($id);
+        $listeCouples=$epreuve->couples;
+        return view('couple',compact("listeCouples"));
+    }
 }
