@@ -9,6 +9,7 @@ services:
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
+      - .:/var/www/html
       - ./public:/var/www/html/public
       - ./storage:/var/www/html/storage
       - ./bootstrap:/var/www/html/bootstrap

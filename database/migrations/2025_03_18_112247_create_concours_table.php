@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('concours', function (Blueprint $table) {
             $table->id();
-            $table->string('numéro');
-            $table->string('nom');
+            $table->string('numero');
+            $table->string('intitule');
+            $table->string('type');
+            $table->string('date');
             $table->timestamps();
-            
-
         });
     }
 

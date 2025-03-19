@@ -6,6 +6,6 @@
     <title>Welcome to Laravel</title>
 </head>
 <body>
-    <h1>ESSAI</h1>
+    <h1>ESSAI 2</h1>
 </body>
 </html>
