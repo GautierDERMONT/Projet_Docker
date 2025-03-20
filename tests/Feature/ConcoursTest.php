@@ -11,14 +11,14 @@ class ConcoursTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function la_page_d_accueil_affiche_les_concours()
+    public function la_liste_des_concours_est_affichée()
     {
-        concours::factory()->count(2)->create();
+        // Génère 3 concours pour le test
+        concours::factory()->count(3)->create();
 
         $response = $this->get('/');
 
         $response->assertStatus(200);
-
         $response->assertViewHas('listeConcours');
     }
 }
