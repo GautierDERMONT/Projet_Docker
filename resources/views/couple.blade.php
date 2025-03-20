@@ -1,18 +1,22 @@
 @extends('base')
 
 @section('body')
-<table class="table table-striped">
-  <thead>
+<div class="text-center mb-4">
+    <h2>LISTE DES COUPLES</h2>
+</div>
+
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
     <tr>
-      <th scope="col">Ordre de passage</th>
-      <th scope="col">Cavalier</th>
-      <th scope="col">Cheval</th>
-      <th scope="col">Ecurie</th>
-      <th scope="col">Coach</th>
-      <th scope="col">Temps</th>
-      <th scope="col">Pénalité</th>
-      <th scope="col">Temps Total</th>
-      <th scope="col">Classement</th>
+      <th scope="col" style="font-size: 1.5rem;">Ordre de passage</th>
+      <th scope="col" style="font-size: 1.5rem;">Cavalier</th>
+      <th scope="col" style="font-size: 1.5rem;">Cheval</th>
+      <th scope="col" style="font-size: 1.5rem;">Écurie</th>
+      <th scope="col" style="font-size: 1.5rem;">Coach</th>
+      <th scope="col" style="font-size: 1.5rem;">Temps</th>
+      <th scope="col" style="font-size: 1.5rem;">Pénalité</th>
+      <th scope="col" style="font-size: 1.5rem;">Temps Total</th>
+      <th scope="col" style="font-size: 1.5rem;">Classement</th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +34,7 @@
     </tr>
     @empty
         <tr>
-            <td colspan="3">Aucun couples.</td>
+            <td colspan="9">Aucun couple.</td>
         </tr>
     @endforelse
   </tbody>
