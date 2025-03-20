@@ -22,7 +22,7 @@ class EpreuveFactory extends Factory
         return [
             'titre' => $this->faker->sentence(3),
             'ordre' => $this->faker->randomDigitNotZero(),
-            'statut' => $this->faker->randomElement(['à venir','en cours', 'terminé']),
+            'statut' => $this->faker->randomElement(['à venir']),
             'concours_id' => 1,
         ];
     }

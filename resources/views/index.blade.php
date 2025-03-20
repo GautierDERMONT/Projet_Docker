@@ -12,21 +12,15 @@
       <th scope="col" style="font-size: 1.5rem;">Intitulé</th>
       <th scope="col" style="font-size: 1.5rem;">Type</th>
       <th scope="col" style="font-size: 1.5rem;">Date</th>
-      @if(Auth::check() && (Auth::user()->role == 'jury' || Auth::user()->role == 'entrée de piste'))
-    <th scope="col" style="font-size: 1.5rem;">Action</th>
-  @endif
     </tr>
   </thead>
   <tbody>
     @forelse($listeConcours as $concours)
-    <tr onclick="window.location='{{ route('showEpreuves', ['id' => $concours->id]) }}'" style="cursor: pointer;">
+    <tr onclick="window.location='{{ route('listing', ['idConcours' => $concours->id,'numListeEpreuve' => 1]) }}'" style="cursor: pointer;">
       <th scope="row">{{ $concours->numero }}</th>
       <td>{{ $concours->intitule }}</td>
       <td>{{ $concours->type }}</td>
       <td>{{ $concours->date }}</td>
-      @if(Auth::check() && (Auth::user()->role=="jury" || Auth::user()->role=="entrée de piste"))
-      <td>PARTICIPER</td>
-      @endif
     </tr>
     @empty
     </tbody>
