@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('cheval');
             $table->string('coach');
             $table->string('ecurie');
-            $table->time('temps'); // sous forme de HH:MM:SS
-            $table->integer('penalite'); 
+            $table->time('temps')->nullable(); // sous forme de HH:MM:SS
+            $table->integer('penalite')->nullable(); 
             $table->integer('ordrePassage'); 
-            $table->time('temps_total'); // sous forme de HH:MM:SS
-            $table->integer('classement'); 
+            $table->time('temps_total')->nullable(); // sous forme de HH:MM:SS
+            $table->integer('classement')->nullable(); 
             $table->unsignedBigInteger('epreuve_id'); // Clé étrangère vers la table epreuves
             $table->foreign('epreuve_id')->references('id')->on('epreuves')->onDelete('cascade');
             $table->timestamps();

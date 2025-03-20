@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\concours;
 use App\Models\epreuve;
+use App\Models\couple;
 use Illuminate\Http\Request;
 
 class ConcoursController extends Controller
@@ -13,15 +14,24 @@ class ConcoursController extends Controller
         return view('index',compact("listeConcours"));
     }
 
-    public function allEpreuves($id){
-        $concours = concours::find($id);
-        $listeEpreuves=$concours->epreuves;
-        return view('epreuves',compact("listeEpreuves"));
-    }
 
-    public function allCouples($id){
-        $epreuve = epreuve::find($id);
-        $listeCouples=$epreuve->couples;
-        return view('couple',compact("listeCouples"));
+    public function listing($idConcours,$numListeEpreuve){
+        $concours = concours::find($idConcours);
+        $listeEpreuves = $concours->epreuves()->orderByRaw("CASE WHEN statut = 'en cours' THEN 0 ELSE 1 END")->get();
+        //$listeEpreuves = $concours->epreuves()->orderByRaw("FIELD(statut, 'en cours', 'à venir', 'terminé', 'cloturée')")->orderBy('ordre', 'desc')->get();
+        $epreuve = $listeEpreuves[$numListeEpreuve-1];
+        
+        //dd($epreuve->titre,$epreuve->id,$numListeEpreuve,$epreuve->couples()->get());
+
+        return response()->view('couple', [
+            "listeEpreuves"=>$listeEpreuves,
+            "idConcours"=>$idConcours,
+            "epreuve"=>$epreuve
+        ])
+        ->header("Refresh", "5")
+        ;
+                         
     }
+    
+    
 }
