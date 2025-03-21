@@ -18,6 +18,8 @@ exit
 
 docker exec -it laravel_app bash
 
+composer update
+
 php artisan key:generate
 
 php artisan migrate
