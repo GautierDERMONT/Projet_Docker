@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     @forelse($listeEpreuves as $epreuve)
-    <tr onclick="window.location='{{ route('showCouples', ['id' => $epreuve->id]) }}'" style="cursor: pointer;">
+    <tr>
       <th scope="row">{{ $epreuve->titre }}</th>
       <td>{{ $epreuve->ordre }}</td>
       <td>{{ $epreuve->statut }}</td>

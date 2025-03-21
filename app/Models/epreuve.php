@@ -20,4 +20,10 @@ class epreuve extends Model
     {
         return $this->hasMany(couple::class);
     }
+
+    protected $fillable = [
+        'titre',
+        'ordre',
+        'statut'
+    ];
 }

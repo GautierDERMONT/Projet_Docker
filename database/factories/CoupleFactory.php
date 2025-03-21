@@ -27,7 +27,7 @@ class CoupleFactory extends Factory
             //'penalite' => $this->faker->numberBetween(0, 20), // pénalité entre 0 et 20
             //'temps_total' => $this->faker->time('H:i:s'),
             'ordrePassage' => $this->faker->numberBetween(0, 500),
-            //'classement' => $this->faker->numberBetween(1, 100), // classement entre 1 et 10
+            'classement' => "partant",
             'epreuve_id' => $this->faker->randomElement([1, 2]),
         ];
     }

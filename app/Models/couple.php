@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class couple extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'cavalier',
+        'cheval',
+        'coach',
+        'ecurie',
+        'temps',
+        'penalite',
+        'ordrePassage',
+        'temps_total',
+        'classement',
+    ];
 }
