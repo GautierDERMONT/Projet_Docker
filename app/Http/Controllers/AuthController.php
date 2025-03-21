@@ -20,7 +20,7 @@ class AuthController extends Controller
         $credentials = $request->only('login', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('/');  
+            return redirect('/');  // Redirection explicite après une connexion réussie
         }
 
         return back()->withErrors(['login' => 'Les identifiants sont incorrects.']);

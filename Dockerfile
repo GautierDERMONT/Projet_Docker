@@ -17,7 +17,29 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo_mysql zip exif pcntl bcmath gd
 
 # Installer Composer
+
+
+RUN apt-get update && apt-get install -y \
+    unzip \
+    libnss3 \
+    libgconf-2-4 \
+    libxi6 \
+    libxrender1 \
+    libxcomposite1 \
+    libxcursor1 \
+    libxtst6 \
+    libxrandr2 \
+    libasound2 \
+    libatk1.0-0 \
+    libgtk-3-0 \
+    chromium-driver
+
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+
+RUN composer require --dev laravel/dusk && \
+    php artisan dusk:install
+
 
 # Copier les fichiers de l'application dans le conteneur
 COPY . /var/www/html

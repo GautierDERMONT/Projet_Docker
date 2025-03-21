@@ -15,7 +15,7 @@
         @csrf
         <div class="mb-3">
             <label for="login" class="form-label">Nom</label>
-            <input type="login" name="login" id="login" class="form-control" required>
+            <input type="text" name="login" id="login" class="form-control" required>
         </div>
 
         <div class="mb-3">
