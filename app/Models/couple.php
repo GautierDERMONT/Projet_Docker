@@ -19,5 +19,6 @@ class couple extends Model
         'ordrePassage',
         'temps_total',
         'classement',
+        'epreuve_id',
     ];
 }

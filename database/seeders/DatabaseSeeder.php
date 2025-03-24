@@ -21,6 +21,6 @@ class DatabaseSeeder extends Seeder
         User::factory()->withRole('entrée de piste')->create();
         concours::factory(3)->create();
         epreuve::factory(7)->create();
-        couple::factory(15)->create();
+        couple::factory(10)->create();
     }
 }

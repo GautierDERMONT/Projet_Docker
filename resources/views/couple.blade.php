@@ -16,17 +16,13 @@
         @foreach ($listeEpreuves as $index => $epreuvve)
             @if($epreuvve->statut == "en cours")
             <button class="btn btn-success mx-2" onclick="loadCouples({{ $epreuvve->id }})">
-                <a href="{{ route('listing', ['idConcours' => $idConcours,'numListeEpreuve' => $index+1]) }}" class="text-decoration-none text-dark">{{ $epreuvve->titre }}({{ $epreuvve->ordre }})</a>
-            </button>
             @elseif($epreuvve->statut == "terminee" || $epreuvve->statut == "cloturee")
             <button class="btn btn-danger mx-2" onclick="loadCouples({{ $epreuvve->id }})">
-                <a href="{{ route('listing', ['idConcours' => $idConcours,'numListeEpreuve' => $index+1]) }}" class="text-decoration-none text-dark">{{ $epreuvve->titre }}({{ $epreuvve->ordre }})</a>
-            </button>
             @else
             <button class="btn btn-secondary mx-2" onclick="loadCouples({{ $epreuvve->id }})">
-            <a href="{{ route('listing', ['idConcours' => $idConcours,'numListeEpreuve' => $index+1]) }}" class="text-decoration-none text-dark"> {{ $epreuvve->titre }}({{ $epreuvve->ordre }})</a>
+            @endif    
+            <a href="{{ route('listing', ['idConcours' => $idConcours,'numListeEpreuve' => $index+1]) }}" class="text-decoration-none text-dark">{{ $epreuvve->titre }}({{ $epreuvve->ordre }})</a>
             </button>
-            @endif
         @endforeach
     </div>
     <a href="{{ route('showEpreuves', ['id' => $idConcours] )}}" class="text-decoration-none text-dark"><button type="button" class="btn btn-primary">Détails sur les épreuves</button></a>
@@ -38,7 +34,7 @@
     @elseif($epreuve->statut =="terminee")
       <h4><a href="{{ route('cloturerEpreuve', ['idEpreuve' => $epreuve->id] )}}" class="text-decoration-none text-dark"><button type="button" class="btn btn-dark">Clôturer</button></a></a></h4>
     @else
-      <h4>Clôturée</h4>
+      <h4>{{ $epreuve->statut }}</h4>
     @endif
 </div>
 
@@ -58,7 +54,8 @@
       @else
       <th scope="col">Classement (provisoire)</th>
       @endif
-      @if($epreuve->statut =="en cours" && Auth::check())
+       
+      @if(Auth::check() && $epreuve->statut =="en cours" || (Auth::check() && Auth::user()->role=="jury" && ($epreuve->statut =="en cours" || $epreuve->statut =="à venir"))) 
       <th scope="col">Action</th>
       @endif
       @if($epreuve->statut =="en cours" && Auth::check() && Auth::user()->role=="jury")
@@ -71,8 +68,15 @@
 @forelse($listeCouples as $couple)
 <tr>
       <th scope="row">{{ $couple->ordrePassage }}</th>
+      @if (Auth::check() && Auth::user()->role=="jury" && ($epreuve->statut=="en cours" || $epreuve->statut=="à venir"))
+      <td><a href="{{ route('modifierCouple', ['idCouple' => $couple->id]) }}">{{ $couple->cavalier }}</a></td>
+      <td><a href="{{ route('modifierCouple', ['idCouple' => $couple->id]) }}">{{ $couple->cheval }}</a></td>
+      
+      @else
       <td>{{ $couple->cavalier }}</td>
       <td>{{ $couple->cheval }}</td>
+      @endif
+      
       <td>{{ $couple->ecurie }}</td>
       <td>{{ $couple->coach }}</td>
       @if($epreuve->statut =="en cours" && Auth::check() && Auth::user()->role=="jury" && $couple->classement == "en piste")
@@ -101,11 +105,12 @@
         @elseif($epreuve->statut =="en cours" && Auth::check())
           @if ($couple->classement == "en bord de piste")
             <td><a href="{{ route('notifierEnPiste', ['idCouple' => $couple->id]) }}" class="text-decoration-none text-dark"><button type="button" class="btn btn-primary">En Piste</button></a></td>
-          {{-- @elseif($couple->classement == "en piste")
+            {{-- @elseif($couple->classement == "en piste")
             <td><a href="{{ route('notifierFini', ['idCouple' => $couple->id]) }}" class="text-decoration-none text-dark"><button type="button" class="btn btn-primary">Fini</button></a></td>
           --}}@endif
         @endif
       @endif
+
       @if($epreuve->statut =="en cours" && Auth::check() && Auth::user()->role=="jury")
       <th scope="col">
         <a href="{{ route('notifierElimine', ['idCouple' => $couple->id]) }}" class="text-decoration-none text-dark"><button class="btn btn-warning">Eliminé</button></a>
@@ -123,10 +128,8 @@
     <tr class="table-danger">
   @elseif($coupleFini->classement=="elimine")
     <tr class="table-warning">
-  @elseif($coupleFini->classement=="fini")
-    <tr class="table-success">
   @else
-    <tr>
+    <tr class="table-success">
   @endif
   <th scope="col">{{ $coupleFini->ordrePassage }}</th>
   <td>{{ $coupleFini->cavalier }}</td>

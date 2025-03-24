@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\concours;
+use Illuminate\Support\Facades\Auth;
 use App\Models\epreuve;
 use App\Models\couple;
+use App\Models\historiqueModif;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -24,7 +26,8 @@ class ConcoursController extends Controller
     public function listing($idConcours,$numListeEpreuve){
         $concours = concours::find($idConcours);
         $listeEpreuves = $concours->epreuves()->orderByRaw("CASE WHEN statut = 'en cours' THEN 0 WHEN statut = 'à venir' THEN 1 ELSE 2 END")->orderBy('ordre','asc')->get();
-        //$listeEpreuves = $concours->epreuves()->whereIn('classement', ['non partant', 'fini', 'éliminé'])->orderByRaw("CASE WHEN statut = 'en cours' THEN 0 ELSE 1 END")->orderBy('ordre','asc')->get();
+        // équivalent en sql : SELECT * epreuves WHERE concours_id = ? ORDER BY CASE WHEN statut = 'en cours' THEN 0 WHEN statut = 'à venir' THEN 1 ELSE 2 END, ordre ASC;
+        //$listeEpreuves = $concours->epreuves()->whereIn('statut"', ['non partant', 'fini', 'éliminé'])->orderByRaw("CASE WHEN statut = 'en cours' THEN 0 ELSE 1 END")->orderBy('ordre','asc')->get();
         //$listeEpreuves = $concours->epreuves()->orderByRaw("FIELD(statut, 'en cours', 'à venir', 'terminé', 'cloturée')")->orderBy('ordre', 'desc')->get();
         $epreuve = $listeEpreuves[$numListeEpreuve-1];
         $listeCouples=$epreuve->couples()->whereIn('classement', ['partant', 'en bord de piste', 'en piste'])->get();
@@ -33,7 +36,7 @@ class ConcoursController extends Controller
         ->orderByRaw("CASE WHEN classement REGEXP '^[0-9]+$' THEN 0 WHEN classement = 'fini' THEN 1 WHEN classement = 'elimine' THEN 2 ELSE 3 END")
         ->orderBy('classement', 'asc')
         ->get();
-
+       // dd(Auth::user());
         //dd($epreuve->titre,$epreuve->id,$numListeEpreuve,$epreuve->couples()->get());
 
         return response()->view('couple', [
@@ -103,7 +106,7 @@ class ConcoursController extends Controller
         $sortedCouplesEquifun = $listeCouplesFini->sortBy('temps_total');
         $sortedCouplesCSO = $listeCouplesFini->sortBy(function ($couple) {
             return [$couple->penalite, $couple->temps_total];
-        });
+        }); // permet de trier la liste sortedCoupleCSO par penalité, et de trier ceux qui ont le même 
         $rang=1;
         if($concours->type="Equifun"){
             foreach($sortedCouplesEquifun as $coupleEquifun){
@@ -207,5 +210,42 @@ class ConcoursController extends Controller
             'classement' => "elimine",
         ]);
         return redirect()->back();
+    }
+
+    public function modifierCouple($idCouple){
+        $couple=couple::find($idCouple);
+        $epreuveDuCouple=epreuve::find($couple->epreuve_id);
+        $allEpreuves=epreuve::all();
+        return view('modifierCouples',[
+            "couple"=>$couple,
+            "epreuveDuCouple"=>$epreuveDuCouple,
+            "allEpreuves"=>$allEpreuves
+        ]);
+    }
+
+    public function modifierCoupleSave(Request $request,$idCouple){
+        $couple=couple::find($idCouple);
+        $ancienNomCavalier=$couple->cavalier;
+        $ancienNomCheval=$couple->cheval;
+        //dd($request->idEpreuve);
+        $couple->update([
+            'cavalier' => $request->cavalier,
+            'cheval' => $request->cheval,
+            'epreuve_id'=>$request->idEpreuve
+        ]);
+
+        historiqueModif::create([
+            "ancienNomCavalier"=>$ancienNomCavalier,
+            "ancienNomCheval"=>$ancienNomCheval,
+            "nouveauNomCavalier"=>$request->cavalier,
+            "nouveauNomCheval"=>$request->cheval,
+            "couple_id"=>$idCouple
+        ]);
+
+        //dd($couple->epreuve_id);
+        $epreuve=epreuve::find($couple->epreuve_id);
+        //dd($epreuve->concours_id);
+        $concours=concours::find($epreuve->concours_id);
+        return redirect()->route('listing',["idConcours"=>$concours->id,"numListeEpreuve"=>1]);
     }
 }

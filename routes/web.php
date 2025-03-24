@@ -22,3 +22,5 @@ Route::get('/concours/couples/notifierEnPiste/{idCouple}', [ConcoursController::
 Route::get('/concours/couples/notifierNonPartant/{idCouple}', [ConcoursController::class, 'notifierNonPartant'])->name('notifierNonPartant')->whereNumber('idCouple');
 Route::get('/concours/couples/notifierElimine/{idCouple}', [ConcoursController::class, 'notifierElimine'])->name('notifierElimine')->whereNumber('idCouple');
 Route::post('/concours/couples/notifierFini/{idCouple}', [ConcoursController::class, 'notifierFini'])->name('notifierFini')->whereNumber('idCouple');
+Route::get('/concours/couples/modifierCouple/{idCouple}', [ConcoursController::class, 'modifierCouple'])->name('modifierCouple')->whereNumber('idCouple');
+Route::post('/concours/couples/modifierCouple/{idCouple}', [ConcoursController::class, 'modifierCoupleSave'])->name('modifierCoupleSave')->whereNumber('idCouple');
