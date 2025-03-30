@@ -20,11 +20,12 @@ class UserFactory extends Factory
             'login' => $this->faker->unique()->userName(),
             'nom' => $this->faker->name(),
             'role' => 'user',
-            'password' => bcrypt('password'), // Assurer que le mot de passe est hashé
+            'password' => bcrypt('password'),
         ];
     }
 
     // Méthode pour créer un utilisateur avec un rôle spécifique
+    /*
     public function withRole(string $role)
     {
         return $this->state(function (array $attributes) use ($role) {
@@ -32,5 +33,5 @@ class UserFactory extends Factory
                 'role' => $role,
             ];
         });
-    }
+    }*/
 }

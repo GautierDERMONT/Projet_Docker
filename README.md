@@ -8,32 +8,18 @@ git clone https://github.com/GautierDERMONT/Projet_Docker.git
 
 docker-compose up -d --build
 
-docker exec -it laravel_db  mysql -u root -p
+puis
 
-mot de passe : secret
+bash ./setup.sh
 
-CREATE DATABASE projet_docker;
+copier et coller ce lien dans le navigateur : 127.0.0.1:8008 ou http://localhost:8008/
 
-exit
+2 comptes pour le site :
+compte jury :
+login : jury
+mdp : password
 
-docker exec -it laravel_app bash
-
-composer update
-
-php artisan key:generate
-
-php artisan migrate
-ou en cas d'erreur :
-php artisan migrate:refresh
-
-php artisan db:seed
-
-copier et coller cela dans le navigateur : 127.0.0.1:8008 ou http://localhost:8008/
-
-Pour arrêter :
-docker-compose down
-
-Pour relancer :
-docker-compose up -d
+compte entrée de piste :
+login : entree
+mdp : password
 ```
-

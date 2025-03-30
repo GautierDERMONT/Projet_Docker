@@ -1,13 +1,10 @@
 # Utiliser une image de base PHP avec Apache
 FROM php:8.2-apache
 
-# Installer les dépendances système, Node.js, npm, Composer, etc.
+# Installer les dépendances système nécessaires
 RUN apt-get update && apt-get install -y \
     git \
-    curl \
     unzip \
-    nodejs \
-    npm \
     libzip-dev \
     libonig-dev \
     libxml2-dev \
@@ -17,29 +14,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo_mysql zip exif pcntl bcmath gd
 
 # Installer Composer
-
-
-RUN apt-get update && apt-get install -y \
-    unzip \
-    libnss3 \
-    libgconf-2-4 \
-    libxi6 \
-    libxrender1 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxtst6 \
-    libxrandr2 \
-    libasound2 \
-    libatk1.0-0 \
-    libgtk-3-0 \
-    chromium-driver
-
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-
-RUN composer require --dev laravel/dusk && \
-    php artisan dusk:install
-
 
 # Copier les fichiers de l'application dans le conteneur
 COPY . /var/www/html
@@ -56,9 +31,9 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 # Exposer le port 80
 EXPOSE 80
 
-# Modifier DocumentRoot d'Apache vers /public
+# Changer le DocumentRoot d'Apache vers /var/www/html/public
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf \
  && echo '<Directory /var/www/html/public>\n\tOptions Indexes FollowSymLinks\n\tAllowOverride All\n\tRequire all granted\n</Directory>' >> /etc/apache2/sites-available/000-default.conf
 
-# Activer mod_rewrite pour Laravel
+# Activer le module rewrite (nécessaire pour Laravel)
 RUN a2enmod rewrite

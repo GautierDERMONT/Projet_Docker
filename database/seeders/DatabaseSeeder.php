@@ -17,10 +17,18 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-        User::factory()->withRole('jury')->create(); 
-        User::factory()->withRole('entrée de piste')->create();
+        //User::factory()->withRole('jury')->create(); 
+        //User::factory()->withRole('entrée de piste')->create();
+        User::factory()->create([
+            'login' => 'jury',
+            'role' => 'jury'
+        ]);
+        User::factory()->create([
+            'login' => 'entree',
+            'role' => 'entrée de piste'
+        ]);
         concours::factory(3)->create();
         epreuve::factory(7)->create();
-        couple::factory(15)->create();
+        couple::factory(10)->create();
     }
 }

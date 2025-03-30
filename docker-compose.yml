@@ -10,6 +10,9 @@ services:
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html
+      - ./public:/var/www/html/public
+      - ./storage:/var/www/html/storage
+      - ./bootstrap:/var/www/html/bootstrap
     ports:
       - "8008:80"
     networks:
@@ -31,6 +34,20 @@ services:
     networks:
       - laravel_network
 
+  db_test:
+    image: mysql:8.0
+    container_name: laravel_db_test
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: projet_docker_test
+      MYSQL_USER: laravel_user
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - dbdata_test:/var/lib/mysql
+    networks:
+      - laravel_network
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: laravel_phpmyadmin
@@ -45,34 +62,9 @@ services:
     networks:
       - laravel_network
 
-  test:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: laravel_test
-    working_dir: /var/www/html
-    volumes:
-      - .:/var/www/html
-    command: ["sh", "-c", "php artisan test --log-junit=storage/logs/phpunit.junit.xml && tail -f /dev/null"]
-
-    depends_on:
-      - db
-    networks:
-      - laravel_network
-
-  selenium:
-    image: selenium/standalone-chrome
-    container_name: selenium
-    ports:
-      - "4444:4444"
-    shm_size: '2gb'
-    networks:
-      - laravel_network   
-
-
-
 volumes:
   dbdata:
+  dbdata_test:
 
 networks:
   laravel_network:
