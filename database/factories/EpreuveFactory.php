@@ -20,7 +20,7 @@ class EpreuveFactory extends Factory
     public function definition()
     {
         return [
-            'titre' => $this->faker->sentence(3),
+            'titre' => $this->faker->randomElement(["Senior","Benjamin","Poussin"]),
             'ordre' => $this->faker->randomDigitNotZero(),
             'statut' => 'à venir',
             'concours_id' => 1,

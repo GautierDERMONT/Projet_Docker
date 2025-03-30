@@ -28,7 +28,7 @@ class CoupleFactory extends Factory
             //'temps_total' => $this->faker->time('H:i:s'),
             'ordrePassage' => $this->faker->numberBetween(0, 500),
             'classement' => "partant",
-            'epreuve_id' => $this->faker->randomElement([1, 2]),
+            'epreuve_id' => 1,
         ];
     }
 }
