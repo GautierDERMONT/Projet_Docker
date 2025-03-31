@@ -88,9 +88,9 @@ class ConcoursController extends Controller
             'statut' => "cloture",
         ]);
         $listeCouplesFini=$epreuve->couples()->where('classement', 'fini')->get();
-        // assigne le temps total pour chaque couple ayant fini le parcours zz
+        // assigne le temps total pour chaque couple ayant fini le parcours
         foreach($listeCouplesFini as $couple){
-             if($concours->type="Equifun"){
+             if($concours->type=="Equifun"){
                 $temps_total=$this->convertToSeconds($couple->temps)+$couple->penalite;
                 $temps_total_timer=$this->convertSecondsToTime($temps_total);
                 // dd($temps_total_timer);
@@ -108,7 +108,7 @@ class ConcoursController extends Controller
             return [$couple->penalite, $couple->temps_total];
         }); // permet de trier la liste sortedCoupleCSO par penalité, et de trier ceux qui ont le même 
         $rang=1;
-        if($concours->type="Equifun"){
+        if($concours->type=="Equifun"){
             foreach($sortedCouplesEquifun as $coupleEquifun){
                 $coupleEquifun->update([
                     'classement'=>$rang

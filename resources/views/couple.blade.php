@@ -31,7 +31,7 @@
       <h4><a href="{{ route('commencerEpreuve', ['idEpreuve' => $epreuve->id] )}}" class="text-decoration-none text-dark"><button type="button" class="btn btn-dark">Commencer</button></a></h4>
     @elseif($epreuve->statut =="en cours" && Auth::check() && Auth::user()->role=="jury")
       <h4><a href="{{ route('terminerEpreuve', ['idEpreuve' => $epreuve->id] )}}" class="text-decoration-none text-dark"><button type="button" class="btn btn-dark">Terminer</button></a></h4>
-    @elseif($epreuve->statut =="terminee")
+    @elseif($epreuve->statut =="terminee" && Auth::check() && Auth::user()->role=="jury")
       <h4><a href="{{ route('cloturerEpreuve', ['idEpreuve' => $epreuve->id] )}}" class="text-decoration-none text-dark"><button type="button" class="btn btn-dark">Clôturer</button></a></a></h4>
     @else
       <h4>{{ $epreuve->statut }}</h4>

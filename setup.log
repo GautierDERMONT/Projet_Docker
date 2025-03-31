@@ -641,3 +641,204 @@ PHPUnit Finished (Shell Exit Code: 0)
 ✅ Toutes les commandes ont été exécutées avec succès !
 🖥️  Application disponible sur http://localhost:8008
 📊 phpMyAdmin disponible sur http://localhost:8080
+🚀 Début de l'installation et configuration...
+⏳ Attente du démarrage des containers (20s)...
+🔧 Configuration des bases de données...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+📦 Installation des dépendances Laravel...
+Error response from daemon: container 0bcf5f506e2d0d1308d83930e1e1c2b0ac73c51a8b09da809ccf40210d67e73b is not running
+Error response from daemon: container 0bcf5f506e2d0d1308d83930e1e1c2b0ac73c51a8b09da809ccf40210d67e73b is not running
+🔄 Exécution des migrations...
+Error response from daemon: container 0bcf5f506e2d0d1308d83930e1e1c2b0ac73c51a8b09da809ccf40210d67e73b is not running
+Error response from daemon: container 0bcf5f506e2d0d1308d83930e1e1c2b0ac73c51a8b09da809ccf40210d67e73b is not running
+🧪 Exécution des tests PHPUnit...
+Error response from daemon: container 0bcf5f506e2d0d1308d83930e1e1c2b0ac73c51a8b09da809ccf40210d67e73b is not running
+🌅 Installation de Laravel Dusk...
+Error response from daemon: container 0bcf5f506e2d0d1308d83930e1e1c2b0ac73c51a8b09da809ccf40210d67e73b is not running
+❌ Échec de l'installation de Laravel Dusk
+🚀 Début de l'installation et configuration...
+⏳ Attente du démarrage des containers (20s)...
+🔧 Configuration des bases de données...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+📦 Installation des dépendances Laravel...
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Package operations: 2 installs, 1 update, 0 removals
+  - Downloading php-webdriver/webdriver (1.15.2)
+  - Downloading laravel/dusk (v8.3.2)
+ 0/2 [>---------------------------]   0%
+ 1/2 [==============>-------------]  50%
+ 2/2 [============================] 100%
+  - Installing php-webdriver/webdriver (1.15.2): Extracting archive
+  - Upgrading nette/utils (v4.0.5 => v4.0.6): Extracting archive
+  - Installing laravel/dusk (v8.3.2): Extracting archive
+ 0/3 [>---------------------------]   0%
+ 1/3 [=========>------------------]  33%
+ 2/3 [==================>---------]  66%
+ 3/3 [============================] 100%
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+   INFO  Application key set successfully.  
+
+🔄 Exécution des migrations...
+
+   INFO  Preparing database.  
+
+  Creating migration table ..................................... 164.26ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ......................... 226.99ms DONE
+  0001_01_01_000001_create_cache_table .......................... 61.19ms DONE
+  0001_01_01_000002_create_jobs_table .......................... 169.85ms DONE
+  2025_03_18_112247_create_concours_table ....................... 52.12ms DONE
+  2025_03_19_131217_create_epreuves_table ...................... 125.47ms DONE
+  2025_03_19_143634_create_couples_table ....................... 111.74ms DONE
+  2025_03_24_093320_create_historique_modifs_table .............. 98.92ms DONE
+
+
+   INFO  Seeding database.  
+
+PHPUnit 11.5.15 by Sebastian Bergmann and contributors.
+
+Unknown option "--force"
+🧪 Exécution des tests PHPUnit...
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::epreuves_du_concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::couples_dune_epreuve_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_stocke_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_efface_de_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::une_epreuve_est_modifie_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                    0.26s  
+
+   PASS  Tests\Feature\ConcoursTest
+  ✓ concours sont affiches                                              13.40s  
+  ✓ epreuves du concours sont affiches                                   0.52s  
+  ✓ couples dune epreuve sont affiches                                   0.24s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                        0.23s  
+
+   PASS  Tests\Feature\dbTest
+  ✓ un concours est stocke dans la bdd                                   0.20s  
+  ✓ un concours est efface de la bdd                                     0.21s  
+  ✓ une epreuve est modifie dans la bdd                                  0.21s  
+
+  Tests:    8 passed (14 assertions)
+  Duration: 17.88s
+
+🌅 Installation de Laravel Dusk...
+./composer.json has been updated
+Running composer update laravel/dusk
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+  [37;44m INFO [39;49m No publishable resources for tag [1m[laravel-assets][22m.  
+
+No security vulnerability advisories found.
+Using version ^8.3 for laravel/dusk
+
+   INFO  Dusk scaffolding installed successfully.  
+
+  Downloading ChromeDriver binaries.. 
+
+   INFO  ChromeDriver binary successfully installed for version 134.0.6998.165.  
+
+................................ 4s DONE
+🔍 Vérification de l'installation Dusk...
+⏳ Attente que Selenium soit prêt (15s)...
+🌐 Exécution des tests Dusk...
+Warning: TTY mode requires /dev/tty to be read/writable.
+PHPUnit Started (PHPUnit 11.5.15 using PHP 8.2.28 (cli) on Linux)
+Test Runner Configured
+Event Facade Sealed
+Test Suite Loaded (1 test)
+Test Runner Started
+Test Suite Sorted
+Test Runner Execution Started (1 test)
+Test Suite Started (/var/www/html/phpunit.dusk.xml, 1 test)
+Test Suite Started (Browser Test Suite, 1 test)
+Test Suite Started (Tests\Browser\AuthTest, 1 test)
+Before First Test Method Called (Tests\Browser\AuthTest::prepare)
+Before First Test Method Finished:
+- Tests\Browser\AuthTest::prepare
+Test Preparation Started (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Before Test Method Called (Tests\Browser\AuthTest::setUp)
+Before Test Method Finished:
+- Tests\Browser\AuthTest::setUp
+Test Prepared (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Test Method Called (Tests\Browser\AuthTest::tearDown)
+After Test Method Finished:
+- Tests\Browser\AuthTest::tearDown
+Test Passed (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Test Finished (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownAfterClass)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownDuskClass)
+After Last Test Method Finished:
+- Tests\Browser\AuthTest::tearDownAfterClass
+- Tests\Browser\AuthTest::tearDownDuskClass
+Test Suite Finished (Tests\Browser\AuthTest, 1 test)
+Test Suite Finished (Browser Test Suite, 1 test)
+Test Suite Finished (/var/www/html/phpunit.dusk.xml, 1 test)
+Test Runner Execution Finished
+
+   PASS  Tests\Browser\AuthTest
+  ✓ utilisateur peut se connecter et se deconnecter                     56.22s  
+
+  Tests:    1 passed (3 assertions)
+  Duration: 59.39s
+
+Test Runner Finished
+PHPUnit Finished (Shell Exit Code: 0)
+✅ Toutes les commandes ont été exécutées avec succès !
+🖥️  Application disponible sur http://localhost:8008
