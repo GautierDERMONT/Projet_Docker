@@ -1,0 +1,643 @@
+🚀 Début de l'installation et configuration...
+⏳ Attente du démarrage des containers (20s)...
+🔧 Configuration des bases de données...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+📦 Installation des dépendances Laravel...
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+   INFO  Application key set successfully.  
+
+🔄 Exécution des migrations...
+
+   INFO  Nothing to migrate.  
+
+
+   INFO  Seeding database.  
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`projet_docker`.`epreuves`, CONSTRAINT `epreuves_concours_id_foreign` FOREIGN KEY (`concours_id`) REFERENCES `concours` (`id`)) (Connection: mysql, SQL: insert into `epreuves` (`titre`, `ordre`, `statut`, `concours_id`, `updated_at`, `created_at`) values (Et quas minima., 1, à venir, 1, 2025-03-31 12:54:58, 2025-03-31 12:54:58))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:822
+    818▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    819▕                 );
+    820▕             }
+    821▕ 
+  ➜ 822▕             throw new QueryException(
+    823▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    824▕             );
+    825▕         }
+    826▕     }
+
+      [2m+15 vendor frames [22m
+
+  16  database/seeders/DatabaseSeeder.php:31
+      Illuminate\Database\Eloquent\Factories\Factory::create()
+      [2m+23 vendor frames [22m
+
+  40  artisan:16
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+🧪 Exécution des tests PHPUnit...
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::epreuves_du_concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::couples_dune_epreuve_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_stocke_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_efface_de_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::une_epreuve_est_modifie_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                    0.20s  
+
+   PASS  Tests\Feature\ConcoursTest
+  ✓ concours sont affiches                                              96.39s  
+  ✓ epreuves du concours sont affiches                                   1.29s  
+  ✓ couples dune epreuve sont affiches                                   1.00s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                        0.21s  
+
+   PASS  Tests\Feature\dbTest
+  ✓ un concours est stocke dans la bdd                                   1.07s  
+  ✓ un concours est efface de la bdd                                     1.01s  
+  ✓ une epreuve est modifie dans la bdd                                  1.37s  
+
+  Tests:    8 passed (14 assertions)
+  Duration: 107.90s
+
+🌅 Installation de Laravel Dusk...
+./composer.json has been updated
+Running composer update laravel/dusk
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+  [37;44m INFO [39;49m No publishable resources for tag [1m[laravel-assets][22m.  
+
+No security vulnerability advisories found.
+Using version ^8.3 for laravel/dusk
+
+   INFO  Dusk scaffolding installed successfully.  
+
+  Downloading ChromeDriver binaries.. 
+
+   INFO  ChromeDriver binary successfully installed for version 134.0.6998.165.  
+
+................................ 4s DONE
+🔍 Vérification de l'installation Dusk...
+write /dev/stdout: Le canal de communication est sur le point d’être fermé.
+⏳ Attente que Selenium soit prêt (15s)...
+🌐 Exécution des tests Dusk...
+Warning: TTY mode requires /dev/tty to be read/writable.
+PHPUnit Started (PHPUnit 11.5.15 using PHP 8.2.28 (cli) on Linux)
+Test Runner Configured
+Event Facade Sealed
+Test Suite Loaded (2 tests)
+Test Runner Started
+Test Suite Sorted
+Test Runner Execution Started (2 tests)
+Test Suite Started (/var/www/html/phpunit.dusk.xml, 2 tests)
+Test Suite Started (Browser Test Suite, 2 tests)
+Test Suite Started (Tests\Browser\AuthTest, 1 test)
+Before First Test Method Called (Tests\Browser\AuthTest::prepare)
+Before First Test Method Finished:
+- Tests\Browser\AuthTest::prepare
+Test Preparation Started (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Before Test Method Called (Tests\Browser\AuthTest::setUp)
+Before Test Method Finished:
+- Tests\Browser\AuthTest::setUp
+Test Prepared (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Test Method Called (Tests\Browser\AuthTest::tearDown)
+After Test Method Finished:
+- Tests\Browser\AuthTest::tearDown
+Test Passed (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Test Finished (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownAfterClass)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownDuskClass)
+After Last Test Method Finished:
+- Tests\Browser\AuthTest::tearDownAfterClass
+- Tests\Browser\AuthTest::tearDownDuskClass
+Test Suite Finished (Tests\Browser\AuthTest, 1 test)
+Test Suite Started (Tests\Browser\ExampleTest, 1 test)
+Before First Test Method Called (Tests\Browser\ExampleTest::prepare)
+Before First Test Method Finished:
+- Tests\Browser\ExampleTest::prepare
+Test Preparation Started (Tests\Browser\ExampleTest::testBasicExample)
+
+   PASS  Tests\Browser\AuthTest
+  ✓ utilisateur peut se connecter et se deconnecter                    494.22s  
+Before Test Method Called (Tests\Browser\ExampleTest::setUp)
+Before Test Method Finished:
+- Tests\Browser\ExampleTest::setUp
+Test Prepared (Tests\Browser\ExampleTest::testBasicExample)
+Test Errored (Tests\Browser\ExampleTest::testBasicExample)
+Curl error thrown for http POST to /session with params: {"capabilities":{"firstMatch":[{"browserName":"chrome","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67ea93bc6bf16","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}]},"desiredCapabilities":{"browserName":"chrome","platform":"ANY","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67ea93bc6bf16","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}}
+
+Failed to connect to localhost port 9515 after 0 ms: Couldn't connect to server
+After Test Method Called (Tests\Browser\ExampleTest::tearDown)
+After Test Method Finished:
+- Tests\Browser\ExampleTest::tearDown
+Test Finished (Tests\Browser\ExampleTest::testBasicExample)
+After Last Test Method Called (Tests\Browser\ExampleTest::tearDownAfterClass)
+After Last Test Method Called (Tests\Browser\ExampleTest::tearDownDuskClass)
+After Last Test Method Finished:
+- Tests\Browser\ExampleTest::tearDownAfterClass
+- Tests\Browser\ExampleTest::tearDownDuskClass
+Test Suite Finished (Tests\Browser\ExampleTest, 1 test)
+Test Suite Finished (Browser Test Suite, 2 tests)
+Test Suite Finished (/var/www/html/phpunit.dusk.xml, 2 tests)
+Test Runner Execution Finished
+
+   FAIL  Tests\Browser\ExampleTest
+  ⨯ basic example                                                        1.80s  
+  ────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Browser\ExampleTest > basic example   WebDriverCurlException   
+  Curl error thrown for http POST to /session with params: {"capabilities":{"firstMatch":[{"browserName":"chrome","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67ea93bc6bf16","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}]},"desiredCapabilities":{"browserName":"chrome","platform":"ANY","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67ea93bc6bf16","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}}
+
+Failed to connect to localhost port 9515 after 0 ms: Couldn't connect to server
+
+  at vendor/php-webdriver/webdriver/lib/Exception/Internal/WebDriverCurlException.php:20
+     16▕         }
+     17▕ 
+     18▕         $message .= "\n\n" . $curlError;
+     19▕ 
+  ➜  20▕         return new self($message);
+     21▕     }
+     22▕ }
+     23▕
+
+      [2m+3 vendor frames [22m
+  4   tests/DuskTestCase.php:45
+      [2m+1 vendor frames [22m
+  6   tests/Browser/ExampleTest.php:16
+
+
+  Tests:    1 failed, 1 passed (3 assertions)
+  Duration: 502.63s
+
+Test Runner Finished
+PHPUnit Finished (Shell Exit Code: 2)
+❌ Les tests Dusk ont échoué
+🚀 Début de l'installation et configuration...
+⏳ Attente du démarrage des containers (20s)...
+🔧 Configuration des bases de données...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+📦 Installation des dépendances Laravel...
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+   INFO  Application key set successfully.  
+
+🔄 Exécution des migrations...
+
+   INFO  Nothing to migrate.  
+
+
+   INFO  Seeding database.  
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`projet_docker`.`epreuves`, CONSTRAINT `epreuves_concours_id_foreign` FOREIGN KEY (`concours_id`) REFERENCES `concours` (`id`)) (Connection: mysql, SQL: insert into `epreuves` (`titre`, `ordre`, `statut`, `concours_id`, `updated_at`, `created_at`) values (Laborum libero eaque., 2, à venir, 1, 2025-03-31 14:50:26, 2025-03-31 14:50:26))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:822
+    818▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    819▕                 );
+    820▕             }
+    821▕ 
+  ➜ 822▕             throw new QueryException(
+    823▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    824▕             );
+    825▕         }
+    826▕     }
+
+      [2m+15 vendor frames [22m
+
+  16  database/seeders/DatabaseSeeder.php:31
+      Illuminate\Database\Eloquent\Factories\Factory::create()
+      [2m+23 vendor frames [22m
+
+  40  artisan:16
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+🧪 Exécution des tests PHPUnit...
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::epreuves_du_concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::couples_dune_epreuve_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_stocke_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_efface_de_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::une_epreuve_est_modifie_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                    0.30s  
+
+   PASS  Tests\Feature\ConcoursTest
+  ✓ concours sont affiches                                             116.52s  
+  ✓ epreuves du concours sont affiches                                   2.85s  
+  ✓ couples dune epreuve sont affiches                                   0.61s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                        0.56s  
+
+   PASS  Tests\Feature\dbTest
+  ✓ un concours est stocke dans la bdd                                   1.94s  
+  ✓ un concours est efface de la bdd                                     3.08s  
+  ✓ une epreuve est modifie dans la bdd                                  0.50s  
+
+  Tests:    8 passed (14 assertions)
+  Duration: 130.53s
+
+🌅 Installation de Laravel Dusk...
+./composer.json has been updated
+Running composer update laravel/dusk
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+  [37;44m INFO [39;49m No publishable resources for tag [1m[laravel-assets][22m.  
+
+No security vulnerability advisories found.
+Using version ^8.3 for laravel/dusk
+
+   INFO  Dusk scaffolding installed successfully.  
+
+  Downloading ChromeDriver binaries.. 
+
+   INFO  ChromeDriver binary successfully installed for version 134.0.6998.165.  
+
+................................ 6s DONE
+🔍 Vérification de l'installation Dusk...
+write /dev/stdout: Le canal de communication est sur le point d’être fermé.
+⏳ Attente que Selenium soit prêt (15s)...
+🌐 Exécution des tests Dusk...
+Warning: TTY mode requires /dev/tty to be read/writable.
+PHPUnit Started (PHPUnit 11.5.15 using PHP 8.2.28 (cli) on Linux)
+Test Runner Configured
+Event Facade Sealed
+Test Suite Loaded (2 tests)
+Test Runner Started
+Test Suite Sorted
+Test Runner Execution Started (2 tests)
+Test Suite Started (/var/www/html/phpunit.dusk.xml, 2 tests)
+Test Suite Started (Browser Test Suite, 2 tests)
+Test Suite Started (Tests\Browser\AuthTest, 1 test)
+Before First Test Method Called (Tests\Browser\AuthTest::prepare)
+Before First Test Method Finished:
+- Tests\Browser\AuthTest::prepare
+Test Preparation Started (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Before Test Method Called (Tests\Browser\AuthTest::setUp)
+Before Test Method Finished:
+- Tests\Browser\AuthTest::setUp
+Test Prepared (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Test Method Called (Tests\Browser\AuthTest::tearDown)
+After Test Method Finished:
+- Tests\Browser\AuthTest::tearDown
+Test Passed (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Test Finished (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownAfterClass)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownDuskClass)
+After Last Test Method Finished:
+- Tests\Browser\AuthTest::tearDownAfterClass
+- Tests\Browser\AuthTest::tearDownDuskClass
+Test Suite Finished (Tests\Browser\AuthTest, 1 test)
+Test Suite Started (Tests\Browser\ExampleTest, 1 test)
+Before First Test Method Called (Tests\Browser\ExampleTest::prepare)
+Before First Test Method Finished:
+- Tests\Browser\ExampleTest::prepare
+Test Preparation Started (Tests\Browser\ExampleTest::testBasicExample)
+
+   PASS  Tests\Browser\AuthTest
+  ✓ utilisateur peut se connecter et se deconnecter                    235.31s  
+Before Test Method Called (Tests\Browser\ExampleTest::setUp)
+Before Test Method Finished:
+- Tests\Browser\ExampleTest::setUp
+Test Prepared (Tests\Browser\ExampleTest::testBasicExample)
+Test Errored (Tests\Browser\ExampleTest::testBasicExample)
+Curl error thrown for http POST to /session with params: {"capabilities":{"firstMatch":[{"browserName":"chrome","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67eaae1c8980d","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}]},"desiredCapabilities":{"browserName":"chrome","platform":"ANY","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67eaae1c8980d","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}}
+
+Failed to connect to localhost port 9515 after 0 ms: Couldn't connect to server
+After Test Method Called (Tests\Browser\ExampleTest::tearDown)
+After Test Method Finished:
+- Tests\Browser\ExampleTest::tearDown
+Test Finished (Tests\Browser\ExampleTest::testBasicExample)
+After Last Test Method Called (Tests\Browser\ExampleTest::tearDownAfterClass)
+After Last Test Method Called (Tests\Browser\ExampleTest::tearDownDuskClass)
+After Last Test Method Finished:
+- Tests\Browser\ExampleTest::tearDownAfterClass
+- Tests\Browser\ExampleTest::tearDownDuskClass
+Test Suite Finished (Tests\Browser\ExampleTest, 1 test)
+Test Suite Finished (Browser Test Suite, 2 tests)
+Test Suite Finished (/var/www/html/phpunit.dusk.xml, 2 tests)
+Test Runner Execution Finished
+
+   FAIL  Tests\Browser\ExampleTest
+  ⨯ basic example                                                        1.93s  
+  ────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Browser\ExampleTest > basic example   WebDriverCurlException   
+  Curl error thrown for http POST to /session with params: {"capabilities":{"firstMatch":[{"browserName":"chrome","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67eaae1c8980d","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}]},"desiredCapabilities":{"browserName":"chrome","platform":"ANY","goog:chromeOptions":{"args":["--window-size=1920,1080","--disable-search-engine-choice-screen","--disable-smooth-scrolling","--disable-gpu","--headless=new","--user-data-dir=/tmp/dusk-user-data-67eaae1c8980d","--no-sandbox","--disable-dev-shm-usage","--remote-debugging-port=9222"]}}}
+
+Failed to connect to localhost port 9515 after 0 ms: Couldn't connect to server
+
+  at vendor/php-webdriver/webdriver/lib/Exception/Internal/WebDriverCurlException.php:20
+     16▕         }
+     17▕ 
+     18▕         $message .= "\n\n" . $curlError;
+     19▕ 
+  ➜  20▕         return new self($message);
+     21▕     }
+     22▕ }
+     23▕
+
+      [2m+3 vendor frames [22m
+  4   tests/DuskTestCase.php:45
+      [2m+1 vendor frames [22m
+  6   tests/Browser/ExampleTest.php:16
+
+
+  Tests:    1 failed, 1 passed (3 assertions)
+  Duration: 242.50s
+
+Test Runner Finished
+PHPUnit Finished (Shell Exit Code: 2)
+❌ Les tests Dusk ont échoué
+🚀 Début de l'installation et configuration...
+⏳ Attente du démarrage des containers (20s)...
+🔧 Configuration des bases de données...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+📦 Installation des dépendances Laravel...
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+   INFO  Application key set successfully.  
+
+🔄 Exécution des migrations...
+
+   INFO  Nothing to migrate.  
+
+
+   INFO  Seeding database.  
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`projet_docker`.`epreuves`, CONSTRAINT `epreuves_concours_id_foreign` FOREIGN KEY (`concours_id`) REFERENCES `concours` (`id`)) (Connection: mysql, SQL: insert into `epreuves` (`titre`, `ordre`, `statut`, `concours_id`, `updated_at`, `created_at`) values (Id sint id., 8, à venir, 1, 2025-03-31 15:15:41, 2025-03-31 15:15:41))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:822
+    818▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    819▕                 );
+    820▕             }
+    821▕ 
+  ➜ 822▕             throw new QueryException(
+    823▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    824▕             );
+    825▕         }
+    826▕     }
+
+      [2m+15 vendor frames [22m
+
+  16  database/seeders/DatabaseSeeder.php:31
+      Illuminate\Database\Eloquent\Factories\Factory::create()
+      [2m+23 vendor frames [22m
+
+  40  artisan:16
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+🧪 Exécution des tests PHPUnit...
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::epreuves_du_concours_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\ConcoursTest::couples_dune_epreuve_sont_affiches(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_stocke_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::un_concours_est_efface_de_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\dbTest::une_epreuve_est_modifie_dans_la_bdd(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                    0.39s  
+
+   PASS  Tests\Feature\ConcoursTest
+  ✓ concours sont affiches                                             128.11s  
+  ✓ epreuves du concours sont affiches                                   2.80s  
+  ✓ couples dune epreuve sont affiches                                   0.72s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                        0.46s  
+
+   PASS  Tests\Feature\dbTest
+  ✓ un concours est stocke dans la bdd                                   1.34s  
+  ✓ un concours est efface de la bdd                                     0.68s  
+  ✓ une epreuve est modifie dans la bdd                                  0.64s  
+
+  Tests:    8 passed (14 assertions)
+  Duration: 141.33s
+
+🌅 Installation de Laravel Dusk...
+./composer.json has been updated
+Running composer update laravel/dusk
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  laravel/dusk [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+  [37;44m INFO [39;49m No publishable resources for tag [1m[laravel-assets][22m.  
+
+No security vulnerability advisories found.
+Using version ^8.3 for laravel/dusk
+
+   INFO  Dusk scaffolding installed successfully.  
+
+  Downloading ChromeDriver binaries.. 
+
+   INFO  ChromeDriver binary successfully installed for version 134.0.6998.165.  
+
+................................ 5s DONE
+🔍 Vérification de l'installation Dusk...
+write /dev/stdout: Le canal de communication est sur le point d’être fermé.
+⏳ Attente que Selenium soit prêt (15s)...
+🌐 Exécution des tests Dusk...
+Warning: TTY mode requires /dev/tty to be read/writable.
+PHPUnit Started (PHPUnit 11.5.15 using PHP 8.2.28 (cli) on Linux)
+Test Runner Configured
+Event Facade Sealed
+Test Suite Loaded (1 test)
+Test Runner Started
+Test Suite Sorted
+Test Runner Execution Started (1 test)
+Test Suite Started (/var/www/html/phpunit.dusk.xml, 1 test)
+Test Suite Started (Browser Test Suite, 1 test)
+Test Suite Started (Tests\Browser\AuthTest, 1 test)
+Before First Test Method Called (Tests\Browser\AuthTest::prepare)
+Before First Test Method Finished:
+- Tests\Browser\AuthTest::prepare
+Test Preparation Started (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Before Test Method Called (Tests\Browser\AuthTest::setUp)
+Before Test Method Finished:
+- Tests\Browser\AuthTest::setUp
+Test Prepared (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Test Method Called (Tests\Browser\AuthTest::tearDown)
+After Test Method Finished:
+- Tests\Browser\AuthTest::tearDown
+Test Passed (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+Test Finished (Tests\Browser\AuthTest::testUtilisateur_peut_se_connecter_et_se_deconnecter)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownAfterClass)
+After Last Test Method Called (Tests\Browser\AuthTest::tearDownDuskClass)
+After Last Test Method Finished:
+- Tests\Browser\AuthTest::tearDownAfterClass
+- Tests\Browser\AuthTest::tearDownDuskClass
+Test Suite Finished (Tests\Browser\AuthTest, 1 test)
+Test Suite Finished (Browser Test Suite, 1 test)
+Test Suite Finished (/var/www/html/phpunit.dusk.xml, 1 test)
+Test Runner Execution Finished
+
+   PASS  Tests\Browser\AuthTest
+  ✓ utilisateur peut se connecter et se deconnecter                    319.00s  
+
+  Tests:    1 passed (3 assertions)
+  Duration: 325.30s
+
+Test Runner Finished
+PHPUnit Finished (Shell Exit Code: 0)
+✅ Toutes les commandes ont été exécutées avec succès !
+🖥️  Application disponible sur http://localhost:8008
+📊 phpMyAdmin disponible sur http://localhost:8080

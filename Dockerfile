@@ -11,7 +11,14 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
-    && docker-php-ext-install pdo_mysql zip exif pcntl bcmath gd
+    wget \
+    gnupg \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
+    && docker-php-ext-install pdo_mysql zip exif pcntl bcmath gd \
+    && rm -rf /var/lib/apt/lists/*
 
 # Installer Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -23,7 +30,7 @@ COPY . /var/www/html
 WORKDIR /var/www/html
 
 # Installer les dépendances Composer
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # Configurer les permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
