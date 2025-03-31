@@ -16,7 +16,7 @@
         @foreach ($listeEpreuves as $index => $epreuvve)
             @if($epreuvve->statut == "en cours")
             <button class="btn btn-success mx-2" onclick="loadCouples({{ $epreuvve->id }})">
-            @elseif($epreuvve->statut == "terminee" || $epreuvve->statut == "cloturee")
+            @elseif($epreuvve->statut == "terminee" || $epreuvve->statut == "cloture")
             <button class="btn btn-danger mx-2" onclick="loadCouples({{ $epreuvve->id }})">
             @else
             <button class="btn btn-secondary mx-2" onclick="loadCouples({{ $epreuvve->id }})">

@@ -28,7 +28,16 @@ class DatabaseSeeder extends Seeder
             'role' => 'entrée de piste'
         ]);
         concours::factory(3)->create();
-        epreuve::factory(7)->create();
-        couple::factory(10)->create();
+        epreuve::factory()->create([
+            'titre' => 'Senior',
+        ]);
+        epreuve::factory()->create([
+            'titre' => 'Benjamin',
+        ]);
+        epreuve::factory()->create([
+            'titre' => 'Poussin',
+        ]);
+
+        couple::factory(5)->create();
     }
 }

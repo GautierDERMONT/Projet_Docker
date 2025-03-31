@@ -18,12 +18,10 @@ class ConcoursFactory extends Factory
     protected $model = concours::class;
     public function definition(): array
     {
-        
-        
         return [
-            'numero' => $this->faker->unique()->numerify('DOC-#####'), // Génère un numéro unique
-            'intitule' => $this->faker->sentence(3), // Génère un titre aléatoire
-            'type' => $this->faker->randomElement(['CSO', 'Equifun']), // Choix aléatoire
+            'numero' => $this->faker->unique()->numerify('DOC-#####'), 
+            'intitule' => $this->faker->sentence(3), 
+            'type' => $this->faker->randomElement(['CSO', 'Equifun']),
             'date' => $this->faker->date(),
             'created_at' => now(),
             'updated_at' => now(),
